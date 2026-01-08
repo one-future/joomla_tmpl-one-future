@@ -1,0 +1,277 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,700);
+
+* {
+    box-sizing: border-box;
+    white-space: normal;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0px;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #f8f8f8;
+}
+
+a, a:hover, a:visited, a:active {
+    font-family: 'Roboto', sans-serif;
+    color: #23ad21;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin: 0px;
+}
+
+pre {
+    margin: 0;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+[class*="col-"] {
+    float: left;
+    width: 100%;
+}
+
+@media(min-width: 768px) {
+    .col-1 { width: 8.33%; }
+    .col-2 { width: 16.66%; }
+    .col-3 { width: 25%; }
+    .col-4 { width: 33.33%; }
+    .col-5 { width: 41.66%; }
+    .col-6 { width: 50%; }
+    .col-7 { width: 58.33%; }
+    .col-8 { width: 66.66%; }
+    .col-9 { width: 75%; }
+    .col-10 { width: 83.33%; }
+    .col-11 { width: 91.66%; }
+    .col-12 { width: 100%; }
+
+    [class*="col-"] {
+        float: none;
+    }
+}
+
+.navbar {
+    background: rgba(255,255,255,0.6);
+    padding: 5px 2vw;
+    position: fixed;
+    top: 0;
+    height: 80px;
+    z-index: 99;
+}
+
+.logo, .logo div, .logo p {
+    height: 100%;
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+}
+
+.nav-menu {
+    height: 100%;
+}
+
+.nav-menu a {
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+.nav-menu a:hover {
+    color: #fed136;
+    text-decoration: none;
+}
+
+.nav-menu ul {
+    margin: 0px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-menu li {
+    margin-left: 30px;
+    list-style: none;
+}
+
+#title-header {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+#title-text {
+    margin-top: 20%;
+    text-align: center;
+}
+
+.title-text {
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 60px;
+    color: white;
+}
+
+.motd {
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: white;
+    margin-top: 40px;
+}
+
+.sponsorbanner {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(255,255,255,0.6);
+    width: 100%;
+    height: 10vw;
+    max-height: 120px;
+    padding: 0px 2vw;
+}
+
+.sponsorbanner p {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sponsorbanner img {
+    height: 90%;
+    width: auto;
+    flex-shrink: 1;
+}
+
+.content-wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .content-wrapper {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .content-wrapper {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content-wrapper {
+        width: 1170px;
+    }
+}
+
+.content_header {
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #5d5d5d;
+    font-weight: 700;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.content_header:after {
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+    width: 40px;
+    height: 2px;
+    content: " ";
+    bottom: -5px;
+    margin-left: -20px;
+    text-align: center;
+    background-color: #23ad21;
+}
+
+.about-text {
+    padding-left: 40px;
+}
+
+.about-text p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    line-height: 21px;
+    letter-spacing: 0.2px;
+    margin: 0 0 10px;
+}
+
+/*------------------------
+Neuigkeiten
+------------------------*/
+.n2-active {
+    background-color: #23ad21 !important;
+}
+
+
+/*------------------------
+Unsere Erfolge
+------------------------*/
+.captionplus-overlay, .captionplus-outside {
+    overflow: unset !important;
+    overflow-y: unset !important;
+}
+
+.successes li {
+    width: 80%;
+    margin: 0px 20px 0px 0px !important;
+}
+
+.successes .sigplus-preview {
+    height: 12em;
+    width: auto;
+}
+
+.captionplus-outside {
+    height: 85px !important;
+}
+
+@media (min-width: 480px) {
+}
+
+@media (min-width: 768px) {
+    .successes li {
+        width: auto;
+    }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+/*------------------------
+Unsere Projekte
+------------------------*/
+
+/*------------------------
+Utility
+------------------------*/
+.no-display {
+    display: none;
+}
