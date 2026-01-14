@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.9.2" type="template">
-	<name>of-original</name>
+<extension version="4.2.8" type="template" method="upgrade" client="site">
+	<name>One Future Original J4</name>
 	<creationDate>2019-01-06</creationDate>
 	<author>Fabian Berndt</author>
-	<authorEmail>fberndt@stfberlin.de</authorEmail>
+	<authorEmail>fberndt@one-future.de</authorEmail>
 	<authorUrl>https://www.fabianberndt.de</authorUrl>
-	<copyright>2026 One Future e.V.</copyright>
-	<license>GNU/GPL</license>
-	<version>0.0.1</version>
-	<description>Template for One Future e.V.</description>
+	<copyright>(C) 2026 Fabian Berndt</copyright>
+	<version>2.1.2</version>
+	<description>Official One Future e.V. template for Joomla! 4.</description>
 	<files>
 		<filename>index.php</filename>
 		<filename>templateDetails.xml</filename>
+		<folder>images</folder>
 		<folder>css</folder>
+		<folder>js</folder>
+		<folder>html</folder>
+		<filename>mobile-optimization.php</filename>
+        <filename>favicon.ico</filename>
+        <filename>template_thumbnail.png</filename>
 	</files>
 	<positions>
 		<position>nav-menu</position>
@@ -21,9 +26,11 @@
 		<position>title-image</position>
 		<position>title-text</position>
 		<position>motd</position>
+		<position>notice</position>
 		<position>sponsors</position>
 		<position>top</position>
 		<position>bottom</position>
 		<position>footer</position>
+		<position>copyright</position>
 	</positions>
 </extension>

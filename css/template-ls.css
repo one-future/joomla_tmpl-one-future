@@ -1,0 +1,97 @@
+/*----------------------------------
+Title Section - Mobile
+----------------------------------*/
+
+@media (min-width: 480px) and (min-height: 320px) {
+    .title-text p {
+        font-size: 25px;
+    }
+
+    .motd p {
+        font-size: 20px;
+    }
+
+    #title-text {
+        margin-top: 80px;
+    }
+}
+
+@media (min-width: 640px) and (min-height: 360px) {
+    .title-text p {
+        font-size: 30px;
+    }
+
+    .motd p {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 820px) and (min-height: 410px) {
+    .title-text p {
+        font-size: 35px;
+    }
+
+    .motd p {
+        font-size: 20px;
+    }
+}
+
+/*------------*/
+
+@media (min-width: 480px) and (min-height: 500px) {
+    #title-text {
+        margin-top: 140px;
+    }
+}
+
+@media (min-width: 480px) and (min-height: 730px) {
+    .title-text p {
+        font-size: 40px;
+    }
+
+    .motd p {
+        font-size: 30px;
+    }
+
+    #title-text {
+        margin-top: 160px;
+    }
+}
+
+@media (min-width: 480px) and (min-height: 950px) {
+    #title-text {
+        margin-top: 220px;
+    }
+}
+
+/*----------------------------------
+Title Section - Tablet
+----------------------------------*/
+
+@media (min-width: 1000px) and (min-height: 760px) {
+    .title-text p {
+        font-size: 50px;
+    }
+
+    .motd p {
+        font-size: 35px;
+    }
+
+    #title-text {
+        margin-top: 180px;
+    }
+}
+
+@media (min-width: 1300px) and (min-height: 1000px) {
+    .title-text p {
+        font-size: 65px;
+    }
+
+    .motd p {
+        font-size: 45px;
+    }
+
+    #title-text {
+        margin-top: 260px;
+    }
+}
