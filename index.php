@@ -112,7 +112,6 @@ HTMLHelper::stylesheet($activeTemplateUrl . '/css/articles.css');
         </p>
     </div>
     <script type="text/javascript" src="<?php echo $activeTemplateUrl ?>/js/modernizr-custom.js"></script>
-    <script type="text/javascript" src="<?php echo $activeTemplateUrl ?>/js/lazysizes.js"></script>
     <script async type="text/javascript" src="<?php echo $activeTemplateUrl ?>/js/script.js"></script>
     <script defer type="text/javascript" src="<?php echo $activeTemplateUrl ?>/js/fontawesome.min.js"></script>
     <script defer type="text/javascript" src="<?php echo $activeTemplateUrl ?>/js/solid.min.js"></script>
