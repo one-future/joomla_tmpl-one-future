@@ -77,6 +77,8 @@ jQuery(document).ready( function() {
                 jQuery("body").css("overflow", "visible");
         });
     });
+
+    jQuery(".nojs-nav").removeClass("nojs-nav");
 });
 
 function sizeSocialViews() {

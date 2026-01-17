@@ -14,7 +14,6 @@
 		<folder>images</folder>
 		<folder>css</folder>
 		<folder>js</folder>
-		<folder>html</folder>
 		<filename>mobile-optimization.php</filename>
         <filename>favicon.ico</filename>
         <filename>template_thumbnail.png</filename>
@@ -33,4 +32,7 @@
 		<position>footer</position>
 		<position>copyright</position>
 	</positions>
+	<updateservers>
+		<server type="extension">https://raw.githubusercontent.com/one-future/joomla_tmpl-one-future/refs/heads/main/updates.xml</server>
+	</updateservers>
 </extension>

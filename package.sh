@@ -1,0 +1,1 @@
+zip -r onefutureoriginalj4.zip ./ -x @.zipignore
