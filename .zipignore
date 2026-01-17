@@ -7,3 +7,4 @@ html/com_content
 html/layouts/joomla
 *.sh
 *.bat
+*/.DS_STORE
