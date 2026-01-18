@@ -9,6 +9,7 @@ $wa  = $document->getWebAssetManager();
 $templateName = $app->getTemplate();
 
 $wa->getRegistry()->addExtensionRegistryFile('joomla');
+$wa->useScript('jquery');
 
 $wa->registerAndUseScript(
     'tmpl_onefutureoriginal.modernizr-custom',
