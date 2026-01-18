@@ -6,7 +6,7 @@
 	<authorEmail>fberndt@one-future.de</authorEmail>
 	<authorUrl>https://www.fabianberndt.de</authorUrl>
 	<copyright>(C) 2026 Fabian Berndt</copyright>
-	<version>2.1.2</version>
+	<version>2.2.0</version>
 	<description>Official One Future e.V. template for Joomla! 4.</description>
 	<files>
 		<filename>index.php</filename>
