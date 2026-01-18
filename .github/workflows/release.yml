@@ -43,7 +43,7 @@ jobs:
           echo "ZIP_NAME=onefutureoriginal-j4-v$VERSION.zip" >> $GITHUB_ENV
 
       - name: Zip Joomla module
-        run: zip -r "$ZIP_NAME" tmpl_onefutureoriginal-j4/* -x @.zipignore
+        run: zip -r "$ZIP_NAME" tmpl_onefutureoriginal-j4/*
 
       - name: Generate SHA256 checksum
         run: |
@@ -105,7 +105,7 @@ jobs:
 
           ET.SubElement(update, "targetplatform", {
             "name": "joomla",
-            "version": "((4\..*)|(5\..*))"
+            "version": "4\..*"
           })
 
           root.append(update)
