@@ -1,3 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
 <updates>
+  <update>
+    <name>onefutureoriginal-j4</name>
+    <description>Official One Future e.V. template for Joomla! 4.</description>
+    <element>onefutureoriginal-j4</element>
+    <type>template</type>
+    <client>site</client>
+    <version>2.2.0</version>
+    <infourl>https://github.com/one-future/joomla_tmpl-one-future</infourl>
+    <downloads>
+      <download type="full" format="zip" sha256="a77e36f9f60f3f594dd48e84ea9780bcd9d33b568684c778746a5bf249dbc1fc">https://github.com/one-future/joomla_tmpl-one-future/releases/download/v2.2.0/onefutureoriginal-j4-v2.2.0.zip</download>
+    </downloads>
+    <php_minimum>8.0</php_minimum>
+    <maintainer>Fabian Berndt</maintainer>
+    <maintainerurl>https://github.com/theEpsilon</maintainerurl>
+    <targetplatform name="joomla" version="4\..*" />
+  </update>
 </updates>
