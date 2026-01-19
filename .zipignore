@@ -1,8 +1,0 @@
-.zipignore
-.gitignore
-.vscode
-.git
-*.zip
-zip.bat
-html/com_content
-html/layouts/joomla

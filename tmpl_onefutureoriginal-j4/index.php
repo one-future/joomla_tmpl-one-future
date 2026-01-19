@@ -1,39 +1,74 @@
 ﻿<?php defined('_JEXEC') or die('Restricted access');
 
 use Joomla\CMS\Factory;
-use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Uri\Uri;
 
-$document = Factory::getDocument();
 $app = Factory::getApplication();
-$wa  = $this->getWebAssetManager();
+$document = $app->getDocument();
+$wa  = $document->getWebAssetManager();
+$templateName = $app->getTemplate();
 
-$activeTemplateUrl = Uri::base() . '/templates/' . $app->getTemplate();
+$wa->getRegistry()->addExtensionRegistryFile('joomla');
+$wa->useScript('jquery');
 
-HTMLHelper::_('jquery.framework');
+$wa->registerAndUseScript(
+    'tmpl_onefutureoriginal.modernizr-custom',
+    'templates/' . $templateName . '/js/modernizr-custom.js',
+    [],
+    ['defer' => true]
+);
+
+$wa->registerAndUseScript(
+    'tmpl_onefutureoriginal.script',
+    'templates/' . $templateName . '/js/script.js',
+    ['jquery'],
+    ['defer' => true]
+);
+
+$wa->registerAndUseScript(
+    'tmpl_onefutureoriginal.fontawesome-base',
+    'templates/' . $templateName . '/js/fontawesome.min.js',
+    [],
+    ['defer' => true]
+);
+
+$wa->registerAndUseScript(
+    'tmpl_onefutureoriginal.fontawesome-solid',
+    'templates/' . $templateName . '/js/solid.min.js',
+    [],
+    ['defer' => true]
+);
+
+$wa->registerAndUseStyle(
+    'tmpl_onefutureoriginal.base',
+    'templates/' . $templateName . '/css/template-alternative.css',
+);
+
+$wa->registerAndUseStyle(
+    'tmpl_onefutureoriginal.articles',
+    'templates/' . $templateName . '/css/articles.css',
+    ['tmpl_onefutureoriginal.base']
+);
+
+
+$activeTemplateUrl = Uri::base() . '/templates/' . $templateName;
+$this->addFavicon($activeTemplateUrl . '/favicon.ico', 'image/image/x-icon', 'shortcut icon');
 
 require __DIR__ . "/mobile-optimization.php";
-
-$now = new DateTime();
-$year = $now->format("Y");
-
-$this->addFavicon($activeTemplateUrl . '/favicon.ico', 'image/image/x-icon', 'shortcut icon');
-HTMLHelper::stylesheet($activeTemplateUrl . '/css/template-alternative.css');
-HTMLHelper::stylesheet($activeTemplateUrl . '/css/articles.css');
 
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>">
 
 <head>
-    <jdoc:include type="head" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:url" content="<?php echo Uri::base() ?>">
     <meta property="og:type" content="website">
     <meta property="og:image" content="<?php echo Uri::base() . '/images/background-VLO_LS.jpg' ?>">
     <meta property="og:title" content="One Future e.V. | Helfen. Lernen. Verstehen.">
     <meta property="og:description" content="Im Herbst 2015 haben wir den gemeinnützigen Verein One Future e.V. aus einer Schülerinitiative des Europäischen Gymnasiums Bertha-von-Suttner gebildet. Der Verein wird von Jugendlichen und Schüler*innen komplett ehrenamtlich geleitet.">
-    <jdoc:include type="modules" name="css" />
+    <jdoc:include type="metas" />
+    <jdoc:include type="styles" />
 </head>
 
 <body>
@@ -102,31 +137,16 @@ HTMLHelper::stylesheet($activeTemplateUrl . '/css/articles.css');
         <jdoc:include type="modules" name="footer" />
     </div>
     <div class="copyright-footer">
+        <p id="copyright">
+            <span style="vertical-align: top;line-height: .4em;">&copy;</span>
+            <?php echo (new DateTime())->format("Y");; ?>
+            One Future e.V.
+        </p>
         <div id="imprint">
             <jdoc:include type="modules" name="copyright" />
         </div>
-        <p id="copyright">
-            <span style="vertical-align: top;line-height: .4em;">&copy;</span>
-            <?php echo $year; ?>
-            One Future e.V.
-        </p>
     </div>
-    <script type="text/javascript" src="<?php echo $activeTemplateUrl ?>/js/modernizr-custom.js"></script>
-    <script async type="text/javascript" src="<?php echo $activeTemplateUrl ?>/js/script.js"></script>
-    <script defer type="text/javascript" src="<?php echo $activeTemplateUrl ?>/js/fontawesome.min.js"></script>
-    <script defer type="text/javascript" src="<?php echo $activeTemplateUrl ?>/js/solid.min.js"></script>
-    <?php if ($app->input->get('view') == "featured") : ?>
-        <script defer type="text/javascript" src="<?php echo $activeTemplateUrl ?>/js/browser-detection.js"></script>
-    <?php endif; ?>
-    <script type="text/javascript">
-        jQuery(".nojs-nav").removeClass("nojs-nav");
-    </script>
-    <style type="text/css">
-        .nojs-nav {
-            background-color: white;
-            box-shadow: 0px 0px 5px grey;
-        }
-    </style>
+    <jdoc:include type="scripts" />
 </body>
 
 </html>
